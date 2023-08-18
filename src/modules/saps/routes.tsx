@@ -1,12 +1,10 @@
-import About from "./pages/About";
-import Dashboard from "./pages/Dashboard";
+import Home from "./pages/Home";
 
 const prefix = '/saps';
 
 const SapsRoutes = [
-    { path: `${prefix}`, element: <Dashboard />},
-    { path: `${prefix}/dashboard`, element: <Dashboard />},
-    { path: `${prefix}/about`, element: <About />}
+    { path: `${prefix}`, element: <Home />},
+    { path: `${prefix}/home`, element: <Home />}
 ];
 
 export default SapsRoutes;

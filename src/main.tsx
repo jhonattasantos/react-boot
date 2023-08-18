@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Routes from './Routes'
+import './global.css'
+import Routes from './routes/Routes'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
