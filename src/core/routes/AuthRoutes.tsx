@@ -1,5 +1,5 @@
-import ForgotPassword from "./pages/forgot-password";
-import SignIn from "./pages/sign-in";
+import ForgotPassword from "../pages/auth/ForgotPassword";
+import SignIn from "../pages/auth/SignIn";
 
 const prefix = '/auth';
 

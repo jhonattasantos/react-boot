@@ -6,8 +6,8 @@ const Sidebar: React.FC = () => {
         <Col sm={3} md={2} className='sidebar'>
             <Nav className='flex-column'>
                 <Nav.Link href='/'>Home</Nav.Link>
-                <Nav.Link href='/saps'>Saps</Nav.Link>
-                <Nav.Link href='/saps/about'>About</Nav.Link>
+                <Nav.Link href='/mcs'>MCS</Nav.Link>
+                <Nav.Link href='/saps'>SAPS</Nav.Link>
             </Nav>
         </Col>
     );
