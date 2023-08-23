@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-const NoAuthLayout: React.FC = () => {
+const AuthLayout: React.FC = () => {
     return (
         <>
             <Outlet />
@@ -9,4 +9,4 @@ const NoAuthLayout: React.FC = () => {
     );
 }
 
-export default NoAuthLayout;
+export default AuthLayout;

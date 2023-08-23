@@ -1,10 +1,10 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import Header from '../common/Header';
-// import Sidebar from '../common/Sidebar';
+import Header from '../pages/home/Header';
+// import Sidebar from './pages/Sidebar'
 
-const AuthApp: React.FC = () => {
+const HomeLayout: React.FC = () => {
     return (
         <>
             <Header />
@@ -16,4 +16,4 @@ const AuthApp: React.FC = () => {
     );
 }
 
-export default AuthApp;
+export default HomeLayout;
