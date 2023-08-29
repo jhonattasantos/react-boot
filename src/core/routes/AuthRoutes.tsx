@@ -5,8 +5,8 @@ const prefix = '/auth';
 
 const AuthRoutes = [
     { path: `${prefix}`, element: <SignIn />},
-    { path: `${prefix}/sign-in`, element: <SignIn />},
-    { path: `${prefix}/forgot-password`, element: <ForgotPassword />},
+    { path: `${prefix}/login`, element: <SignIn />},
+    { path: `${prefix}/esqueci-a-senha`, element: <ForgotPassword />},
 ];
 
 export default AuthRoutes;

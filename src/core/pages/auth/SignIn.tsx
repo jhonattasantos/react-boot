@@ -1,9 +1,6 @@
 import React from 'react';
-import { login } from '../../../services/auth';
 
 const SignIn: React.FC = () => {
-
-    login().then((res) => console.log(res))
 
     return (
         <div className="">

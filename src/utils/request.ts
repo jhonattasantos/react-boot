@@ -1,13 +1,13 @@
-import axios from "axios";
+import axios, { InternalAxiosRequestConfig } from "axios";
 
-const API_URL = "https://api.chucknorris.io/";
+const API_URL = 'https://api.github.com';
 
 const axiosApiInstance = axios.create({
     baseURL: API_URL,
 });
 
 axiosApiInstance.interceptors.request.use(
-    async (config) => {
+    async (config: InternalAxiosRequestConfig) => {
         config.headers = {
             "Content-Type": "application/json",
             Accept: "application/json",
