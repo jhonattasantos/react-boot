@@ -24,7 +24,6 @@ export const App = () => {
                             />
                         ))
                     }
-
                     {
                         privateRoutes.map((route, index) => (
                             <Route
