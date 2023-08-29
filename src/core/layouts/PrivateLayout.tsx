@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
-import Header from '../core/pages/home/Header';
+import Header from '../pages/private/Header';
 
-const LayoutPrivado = ({ children }: { children: JSX.Element}) => {
+const PrivateLayout = ({ children }: { children: JSX.Element}) => {
 
     return (
         <div className="App">
@@ -13,4 +13,4 @@ const LayoutPrivado = ({ children }: { children: JSX.Element}) => {
     );
 }
 
-export default LayoutPrivado;
+export default PrivateLayout;

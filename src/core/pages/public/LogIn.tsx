@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SignIn: React.FC = () => {
+const LogIn: React.FC = () => {
 
     return (
         <div className="">
@@ -23,12 +23,6 @@ const SignIn: React.FC = () => {
                 </div>
 
                 <div className="form-group">
-                    <a
-                        href="/auth/forgot-password"
-                        className="text-muted float-right"
-                    >
-                        <small>Esqueceu sua senha?</small>
-                    </a>
                     <label htmlFor="password">Senha</label>
                     <div className="input-group input-group-merge">
                         <input
@@ -44,6 +38,12 @@ const SignIn: React.FC = () => {
                             </div>
                         </div>
                     </div>
+                    <a
+                        href="/auth/forgot-password"
+                        className="text-muted float-right"
+                    >
+                        <small>Esqueceu sua senha?</small>
+                    </a>
                 </div>
 
                 <div className="form-group mb-3 text-center">
@@ -57,4 +57,4 @@ const SignIn: React.FC = () => {
     )
 }
 
-export default SignIn
+export default LogIn

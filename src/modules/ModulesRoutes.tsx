@@ -1,8 +1,8 @@
-import McsRoutes  from './mcs/McsRoutes.js'
+import MgsRoutes  from './mgs/MgsRoutes.js'
 import SapsRoutes  from './saps/SapsRoutes.js'
 
 const Modules = [
-    ...McsRoutes,
+    ...MgsRoutes,
     ...SapsRoutes
 ];
 
