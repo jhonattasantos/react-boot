@@ -1,39 +1,47 @@
 import { Route, Routes } from "react-router-dom"
-import { rotasPublicas, rotasPrivadas } from "./routes"
-import Authmiddleware from "./routes/Authmiddleware";
-import LayoutPrivado from "./layouts/LayoutPrivado";
-import LayoutPublico from "./layouts/LayoutPublico";
+import { BrowserRouter } from 'react-router-dom'
+import { AuthProvider } from './core/contexts/private/AuthProvider';
+import AuthMiddleware from "./core/AuthMiddleware";
+import { publicRoutes, privateRoutes } from "./core/Routes"
+import PrivateLayout from "./core/layouts/PrivateLayout";
+import PublicLayout from "./core/layouts/PublicLayout";
 
 export const App = () => {
     return (
-        <div>
-            <Routes>
-                {
-                    rotasPublicas.map((route, index) => (
-                        <Route
-                            path={route.path}
-                            element={<LayoutPublico>{route.element}</LayoutPublico>}
-                            key={index}
-                        />
-                    ))
-                }
-
-                {
-                    rotasPrivadas.map((route, index) => (
-                        <Route
-                            path={route.path}
-                            element={
-                                <Authmiddleware>
-                                    <LayoutPrivado>
+        <AuthProvider>
+            <BrowserRouter>
+                <Routes>
+                    {
+                        publicRoutes.map((route, index) => (
+                            <Route
+                                path={route.path}
+                                element={
+                                    <PublicLayout>
                                         {route.element}
-                                    </LayoutPrivado>
-                                </Authmiddleware>
-                            }
-                            key={index}
-                        />
-                    ))
-                }
-            </Routes>
-        </div>
+                                    </PublicLayout>
+                                }
+                                key={index}
+                            />
+                        ))
+                    }
+
+                    {
+                        privateRoutes.map((route, index) => (
+                            <Route
+                                path={route.path}
+                                element={
+                                    <AuthMiddleware>
+                                        <PrivateLayout>
+                                            {route.element}
+                                        </PrivateLayout>
+                                    </AuthMiddleware>
+                                }
+                                key={index}
+                            />
+                        ))
+                    }
+                </Routes>
+            </BrowserRouter>
+        </AuthProvider>
     );
 }
